@@ -13,7 +13,7 @@ app.get('*', function(req,res){
 
 
 //listening section
-var port=8080
+var port = process.env.PORT || 3000;
 app.listen(port,function(){
     console.log('app listening on port '+port)
 })
