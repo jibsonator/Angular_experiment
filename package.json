@@ -1,0 +1,33 @@
+{
+  "name": "social_graph",
+  "version": "0.0.0",
+  "description": "Fun bundle of physics",
+  "main": "server.js",
+  "dependencies": {
+    "express": "~4.11.0",
+    "body-parser": "~1.10.1",
+    "mongoose": "~3.8.21",
+    "gulp": "~3.8.10",
+    "gulp-concat": "~2.4.3",
+    "gulp-uglify": "~1.1.0",
+    "gulp-ng-annotate": "~0.5.0",
+    "gulp-stylus": "~2.0.0",
+    "gulp-nodemon": "~1.0.5",
+    "gulp-livereload": "~3.5.0",
+    "bcrypt": "~0.8.1",
+    "jwt-simple": "~0.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jibsonator/Angular_experiment.git"
+  },
+  "author": "Dr Mike",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/jibsonator/Angular_experiment/issues"
+  }
+}
