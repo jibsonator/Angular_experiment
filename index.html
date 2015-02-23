@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'  type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <script src="https://code.angularjs.org/1.3.0-beta.19/angular.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div ng-app="animateApp" ng-controller="AnimateCtrl">
+        <h2 class="text-success text-center" ng-model="count">You have scored: {{count}} points</h2>
+        <div class="row">
+        <div class="col-sm-8 col-sm-offset-4">
+                <div class="circle"
+                ng-repeat="shape in shapes"
+                ng-style="{'backgroundColor':shape.color,'left':shape.x+'px','top':shape.y+'px'}"
+                ng-mouseenter="removeBob($index)"
+                >
+            </div>
+            <div class="black_hole" ng-show="is_blackhole"></div>
+        </div>
+        </div>
+        <!-- Empty space, is there a better way???.... -->
+        <h1>&nbsp;</h1>
+        <h1>&nbsp;</h1>
+        <h1>&nbsp;</h1>
+        <h1>&nbsp;</h1>
+        <h1>&nbsp;</h1>
+        <h1>&nbsp;</h1>
+        <h1>&nbsp;</h1>
+        <!-- End empty space -->
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-4 btn-group btn-group-vertical text-center">
+                <button id="grav1" class="btn btn-default" ng-init="is_gravity=false" ng-click="flipGravity()">
+                    Flip gravity
+                </button>
+                <label for="grav1">{{is_gravity}}</label></li>
+
+                <button class="btn btn-default" id="black_hole1" ng-init="is_blackhole=false" ng-click="flipBlackHole()">
+                    Black hole 
+                </button>
+                <label for="black_hole1"> {{is_blackhole}} </label>
+
+                <button class="btn btn-default" id="friction1" ng-click="incFriction()">
+                    Decrease Friction
+                </button>
+                <label for="friction1" ng-model="friction">{{(1-friction).toFixed(2)}}</label>
+                <button class="btn btn-default"  ng-click="decFriction()">
+                    Increase Friction
+                </button>
+            </div>
+
+        </div>
+
+        <script type="text/javascript"></script>
+    </div>
+</div>
+</body>
+
+</html>
