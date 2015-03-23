@@ -28,7 +28,7 @@ angular.module('animateApp', [])
         }
 
         // Start timer-based, changes of the shape properties
-        //animator( $scope.shapes, $timeout );
+        // animator( $scope.shapes, $timeout );
 
     $scope.removeBob = function($index) {
         $scope.shapes.splice($index,1)
@@ -42,11 +42,9 @@ angular.module('animateApp', [])
         $scope.count++;
         };
 
-    var animate=animator($scope,$scope.shapes,$timeout)
+    var animate = animator($scope,$scope.shapes,$timeout)
     });
     
-    // animator;
-
 
 
 function animator($scope,shapes, $timeout) {
@@ -116,6 +114,7 @@ function animator($scope,shapes, $timeout) {
                 shape.velY-=$scope.is_gravity;
             }
         }
+        // call the tick function again after a delay
         $timeout(tick, 20);
     })();
 }
